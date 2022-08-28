@@ -21,7 +21,7 @@ module.exports = {
 
 				if (out.id != undefined) {
 					const artEmbed = new EmbedBuilder()
-						.setColor('Random')
+						.setColor('Black')
 						.setDescription(await buildText("artstation_click_here", client, { guild: interaction.guildId, variables: [out.permalink] }))
 						.setAuthor({ name: out.title, url: out.user.medium_avatar_url })
 						.addFields([
@@ -55,7 +55,7 @@ module.exports = {
 						
 							out.total_count = (out.total_count-1 === 0) ? 1 : out.total_count - 1;
 							const artEmbed = new EmbedBuilder()
-								.setColor('Random')
+								.setColor('Black')
 								.setDescription(await buildText("artstation_search_found", client, { guild: interaction.guildId, variables: [query, out.total_count, out.data[rn].url] }))
 								.setAuthor({ name: out.data[rn].title, url: out.data[rn].smaller_square_cover_url })
 								.setImage(out.data[rn].smaller_square_cover_url)
